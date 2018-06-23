@@ -1,0 +1,14 @@
+C:\Users\gudiyaa\source\repos\InteractiveShravyaProfile\ViewModels\bin\Debug\ViewModels.dll
+C:\Users\gudiyaa\source\repos\InteractiveShravyaProfile\ViewModels\bin\Debug\ViewModels.pdb
+C:\Users\gudiyaa\source\repos\InteractiveShravyaProfile\ViewModels\bin\Debug\AutoMapper.dll
+C:\Users\gudiyaa\source\repos\InteractiveShravyaProfile\ViewModels\bin\Debug\Ninject.dll
+C:\Users\gudiyaa\source\repos\InteractiveShravyaProfile\ViewModels\bin\Debug\System.ValueTuple.dll
+C:\Users\gudiyaa\source\repos\InteractiveShravyaProfile\ViewModels\bin\Debug\AutoMapper.pdb
+C:\Users\gudiyaa\source\repos\InteractiveShravyaProfile\ViewModels\bin\Debug\AutoMapper.xml
+C:\Users\gudiyaa\source\repos\InteractiveShravyaProfile\ViewModels\bin\Debug\Ninject.xml
+C:\Users\gudiyaa\source\repos\InteractiveShravyaProfile\ViewModels\bin\Debug\System.ValueTuple.xml
+C:\Users\gudiyaa\source\repos\InteractiveShravyaProfile\ViewModels\obj\Debug\ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\gudiyaa\source\repos\InteractiveShravyaProfile\ViewModels\obj\Debug\ViewModels.csproj.CopyComplete
+C:\Users\gudiyaa\source\repos\InteractiveShravyaProfile\ViewModels\obj\Debug\ViewModels.dll
+C:\Users\gudiyaa\source\repos\InteractiveShravyaProfile\ViewModels\obj\Debug\ViewModels.pdb
+C:\Users\gudiyaa\source\repos\InteractiveShravyaProfile\ViewModels\obj\Debug\ViewModels.csprojAssemblyReference.cache

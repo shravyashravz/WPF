@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:screens="clr-namespace:InteractiveShravyaProfile.Screens"
+                    xmlns:viewModel="clr-namespace:ViewModels;assembly=ViewModels"
+                                       
+    xmlns:local="clr-namespace:InteractiveShravyaProfile">
+
+    <DataTemplate x:Name="ResumeTemplate" DataType="{x:Type viewModel:ResumeViewModel }">
+        <screens:ResumeScreen DataContext="{Binding}"/>
+    </DataTemplate>
+
+    <DataTemplate x:Name="HelpTemplate" DataType="{x:Type viewModel:HelpViewModel }">
+        <screens:HelpScreen DataContext="{Binding}"/>
+    </DataTemplate>
+
+</ResourceDictionary>
