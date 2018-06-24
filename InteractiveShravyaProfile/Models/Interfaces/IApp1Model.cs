@@ -19,5 +19,7 @@ namespace Models.Interfaces
         event ResultUpdatedEventHandler OnResultUpdated;
 
         List<Prediction> predictionsx { get; set; }
+
+      string AppDescription { get; set; }
     }
 }

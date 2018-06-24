@@ -13,7 +13,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="15" />
-            <RowDefinition Height="60" />
+            <RowDefinition Height="80" />
             <RowDefinition Height="20" />
             <RowDefinition Height="35" />
             <RowDefinition Height="100*" />
@@ -24,6 +24,19 @@
         </Grid>
 
         <Grid Grid.Row="1"  Background="DarkSlateBlue" >
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60*"/>
+                    <ColumnDefinition Width="40*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Label Content="Shravya's Interactive Profile" Style="{DynamicResource AppTitle}"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Image Source="/Images/MnsuLogo.png" Margin="2,0,40,0"/>
+                </Grid>
+                
+            </Grid>
            
         </Grid>
         <Grid Grid.Row="2"  Background="Gold">
@@ -43,32 +56,35 @@
              Content="Resume"
              Command="{Binding NavigateToResume}"
              CommandParameter="ResumeScreen"
+             Style="{DynamicResource MnsuStyle}"
              />
             <Button Grid.Column="1"
              x:Name="App1Button"
-             Content="Application 1"
+             Content="AI Demo"
              Command="{Binding NavigateToApp1}"
               CommandParameter="App1Screen"
+             Style="{DynamicResource MnsuStyle}"
              />
             <Button Grid.Column="2"
              x:Name="App2Button"
              Content="Application 2"
              Command="{Binding NavigateToApp2}"
               CommandParameter="App2Screen"
-                    
+              Style="{DynamicResource MnsuStyle}"    
              />
             <Button Grid.Column="3"
              x:Name="HelpButton"
              Content="Help"
              Command="{Binding NavigateToHelp}" 
              CommandParameter="HelpScreen"
+             Style="{DynamicResource MnsuStyle}"
              />
             
 
 
         </Grid>
 
-        <Grid Grid.Row="4">
+        <Grid Grid.Row="4" Background="#eeee">
             <ContentControl x:Name="contentControl" Margin="3" Content="{Binding CurrentViewModel}" />
         </Grid>
 

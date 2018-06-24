@@ -61,12 +61,19 @@ namespace ViewModels
 
             }
         }
-       
-        private string _contextName = "BTE Style Predictor";
+
+        private string _contextName = null;
 
         public string ContextName
         {
-            get { return _contextName; }
+            get
+            {
+                if (_contextName == null)
+                {
+                   _contextName = _app1Model.AppDescription;
+                }
+                return _contextName;
+            }
             set { _contextName = value; }
         }
 

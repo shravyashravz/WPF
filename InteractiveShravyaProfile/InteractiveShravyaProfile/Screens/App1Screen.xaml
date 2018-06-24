@@ -15,11 +15,15 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Grid  Grid.Row="0">
-                <Label   Content="{Binding ContextName}"   />
+            <Grid  Grid.Row="0" Background="LightGray">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Description : " FontWeight="Bold" FontFamily="GOOD TIMES" FontSize="15"/>
+                    <Label Content="{Binding ContextName}"   FontSize="10" />
+                </StackPanel>
+                
             </Grid>
             <Grid Grid.Row="1">
-                <Button  Content="Upload Image" Command="{Binding BrowseFile}"></Button>
+                <Button Width="200" Content="Upload Image" HorizontalAlignment="Left" Padding="2" Command="{Binding BrowseFile}" Style="{DynamicResource MnsuStyle}"></Button>
             </Grid>
             <Grid Grid.Row="2" Margin="5">
                 <Grid>
@@ -28,7 +32,7 @@
                         <ColumnDefinition Width="40*"/>
 
                     </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="0">
+                    <Grid Grid.Column="0" Background="Black">
                         <Image Source="{Binding ImgSrc}" ></Image>
                     </Grid>
                     <Grid Grid.Column="1">

@@ -15,19 +15,27 @@ using Models.CustomEvents;
 namespace Models.Models
 {
 
-    public class App1Model:IApp1Model
+    public class App1Model : IApp1Model
     {
 
-       // public event EventHandler _show;
+        // public event EventHandler _show;
         public event ResultUpdatedEventHandler OnResultUpdated;
         public List<Prediction> predictionsx { get; set; }
 
+        public string AppDescription { get; set; }
 
-        public  PredictionResult brwoseForFileNameAsync()
+        public App1Model()
         {
-            List<Prediction> t = null ;
+            AppDescription = " The application is capable of predicting if an image uploaded  image is a hearing aid of style BTE or NOT with a probability of the accuracy";
+        }
+
+
+        public PredictionResult brwoseForFileNameAsync()
+        {
+            List<Prediction> t = null;
             string fileName = "";
-            OpenFileDialog dialog = new OpenFileDialog();
+            BitmapImage bitmapimageresult = new BitmapImage();
+           OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "Image files (*.png; *.jpg)|*.png;*.jpg;*jpeg|All files (*.*)|*.*";
             dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
 
@@ -35,13 +43,22 @@ namespace Models.Models
             {
                 fileName = dialog.FileName;
                 //  filename = fileName;
-                 MakePredictionAsync(fileName);
+                MakePredictionAsync(fileName);
             }
-            BitmapImage bitmapimage =  new BitmapImage(new Uri(fileName));
+
+            if (fileName != "")
+            {
+                bitmapimageresult = new BitmapImage(new Uri(fileName));
+            }
+            else
+            {
+                bitmapimageresult = null;
+            }
+          
 
             return new PredictionResult
             {
-                ImgSrc = bitmapimage,
+                ImgSrc = bitmapimageresult,
                 predictions = t
             };
         }
