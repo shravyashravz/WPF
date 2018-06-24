@@ -6,8 +6,11 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
             <locator:ViewModelLocator x:Key="ViewModelLocator"/>
         </ResourceDictionary>
-         
+
     </Application.Resources>
 </Application>

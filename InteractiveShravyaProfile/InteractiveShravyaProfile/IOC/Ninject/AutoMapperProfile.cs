@@ -12,6 +12,9 @@ namespace InteractiveShravyaProfile.IOC.Ninject
         public AutoMapperProfile()
         {
             //Bind resume vm to resume model
+
+
+
         }
     }
 }

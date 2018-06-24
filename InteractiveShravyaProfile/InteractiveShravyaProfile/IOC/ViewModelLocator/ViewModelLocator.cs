@@ -25,6 +25,23 @@ namespace InteractiveShravyaProfile.IOC.ViewModelLocator
             }
         }
 
+        public App1ViewModel App1ViewModel
+        {
+            get
+            {
+                return IocKernel.Get<App1ViewModel>();
+            }
+        }
+
+        public App2ViewModel App2ViewModel
+        {
+            get
+            {
+                return IocKernel.Get<App2ViewModel>();
+            }
+        }
+
+
         public HelpViewModel HelpViewModel
         {
             get

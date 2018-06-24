@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\gudiyaa\source\repos\InteractiveShravyaProfile\InteractiveShravyaProfile\obj\Debug\
+C:\Users\gudiyaa\Desktop\WPF\InteractiveShravyaProfile\InteractiveShravyaProfile\obj\Debug\
 InteractiveShravyaProfile
 none
 false
 DEBUG;TRACE
-C:\Users\gudiyaa\source\repos\InteractiveShravyaProfile\InteractiveShravyaProfile\App.xaml
-41021577405
+C:\Users\gudiyaa\Desktop\WPF\InteractiveShravyaProfile\InteractiveShravyaProfile\App.xaml
+61140756107
 
-17-685305580
-181898916346
-MainWindow.xaml;Resources.xaml;Screens\HelpScreen.xaml;Screens\ResumeScreen.xaml;
+19116832054
+21-1037204757
+MainWindow.xaml;Resources.xaml;Screens\App1Screen.xaml;Screens\App2Screen.xaml;Screens\HelpScreen.xaml;Screens\ResumeScreen.xaml;
 
 False
 

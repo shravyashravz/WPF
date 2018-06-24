@@ -9,8 +9,30 @@
         <screens:ResumeScreen DataContext="{Binding}"/>
     </DataTemplate>
 
+    <DataTemplate x:Name="App1Template" DataType="{x:Type viewModel:App1ViewModel }">
+        <screens:App1Screen DataContext="{Binding}"/>
+    </DataTemplate>
+
+    <DataTemplate x:Name="App2Template" DataType="{x:Type viewModel:App2ViewModel }">
+        <screens:App2Screen DataContext="{Binding}"/>
+    </DataTemplate>
+
     <DataTemplate x:Name="HelpTemplate" DataType="{x:Type viewModel:HelpViewModel }">
         <screens:HelpScreen DataContext="{Binding}"/>
     </DataTemplate>
+
+    <Style x:Key="HeaderStyle" TargetType="{x:Type Label}">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Background" Value="DarkGray"/>
+    </Style>
+    
+    <Style x:Key="BasicInfo" TargetType="{x:Type Label}">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Padding"   Value="10"/>
+        <Setter Property="FontWeight"   Value="Bold"/>
+    </Style>
 
 </ResourceDictionary>

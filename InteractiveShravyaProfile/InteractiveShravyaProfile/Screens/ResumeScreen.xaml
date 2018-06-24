@@ -3,15 +3,103 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:InteractiveShravyaProfile.Screens"
-             
+             xmlns:local="clr-namespace:InteractiveShravyaProfile.Screens"           
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              DataContext="{Binding ResumeViewModel ,Source={StaticResource ViewModelLocator}}"
              >
-    
     <Grid >
-        <Label Content="{Binding ContextName}"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" x:Name="_heading" Margin="10,0,10,0">
+                <Label Content="{Binding ContextName}"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="6*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="40"/>
+                        
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" x:Name="profileImage">
+                        <Image Source="/Images/ShresumeImage.jpg"></Image>
+                    </Grid>
+                    <Grid Grid.Row="1" x:Name="mnsuImage">
+
+                    </Grid>
+
+                </Grid>
+                <Grid Grid.Column="1" x:Name="_details">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20*"/>
+                            <RowDefinition Height="40*"/>
+                            <RowDefinition Height="40"/>
+
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0" x:Name="_nameEmail" Margin="10">
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="Name:" Style="{DynamicResource BasicInfo}"></Label>
+                                    <Label Content="{Binding ResumeDetails.Name}" Style="{DynamicResource BasicInfo}"></Label>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="Email:"  Style="{DynamicResource BasicInfo}"></Label>
+                                    <Label Content="{Binding ResumeDetails.Email}"  Style="{DynamicResource BasicInfo}"></Label>
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                        <Grid Grid.Row="1" Margin="10">
+                            <ListView ItemsSource="{Binding ResumeDetails.SkillsCollection}">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="20*"/>
+                                                <RowDefinition Height="60*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid Grid.Row="0" x:Name="SkillHeading" Margin="2">
+                                                <Label Content="{Binding SkillsCategory}" Style="{DynamicResource HeaderStyle}"></Label>
+                                            </Grid>
+                                            <Grid Grid.Row="1" x:Name="SkillsList" Margin="2">
+                                                <ListView ItemsSource="{Binding SkillsList}" HorizontalAlignment="Stretch">
+                                                    <ListView.ItemsPanel>
+                                                        <ItemsPanelTemplate>
+                                                            <WrapPanel Width="{Binding (FrameworkElement.ActualWidth), 
+            RelativeSource={RelativeSource AncestorType=ScrollContentPresenter}}"
+            ItemWidth="{Binding (ListView.View).ItemWidth, 
+            RelativeSource={RelativeSource AncestorType=ListView}}"
+            MinWidth="{Binding ItemWidth, RelativeSource={RelativeSource Self}}"
+            ItemHeight="{Binding (ListView.View).ItemHeight, 
+            RelativeSource={RelativeSource AncestorType=ListView}}" />
+                                                        </ItemsPanelTemplate>
+                                                    </ListView.ItemsPanel>
+                                                </ListView>
+                                            </Grid>
+                                        </Grid>
+                                        
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </Grid>
+                        <Grid Grid.Row="2">
+
+                        </Grid>
+                    </Grid>
+                </Grid>
+                
+                
+            </Grid>
+        </Grid>
+       
 
     </Grid>
 </UserControl>

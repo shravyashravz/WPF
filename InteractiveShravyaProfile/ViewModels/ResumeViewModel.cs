@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Models.Domain;
+using Models.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +10,17 @@ namespace ViewModels
 {
   public class ResumeViewModel : BaseViewModel, IScreen
     {
+
+        private IResumeModel _resumeModel;
+        public ResumeViewModel(IResumeModel resumeModel)
+        {
+            _resumeModel = resumeModel;
+
+        }
         public string ScreenName => ScreenNames.ResumeScreen;
 
         public void OnScreenActivated()
         {
-           // throw new NotImplementedException();
         }
 
         public void OnScreenDeactivated()
@@ -20,13 +28,34 @@ namespace ViewModels
             throw new NotImplementedException();
         }
 
-        private string _contextName="shravya's resume";
+        private string _contextName="My Resume";
 
         public string ContextName
         {
-            get { return _contextName="shravya's resume"; }
+            get { return _contextName; }
             set { _contextName = value; }
         }
+
+        private Details _resumeDetails ;
+
+        public  Details ResumeDetails
+        {
+            get
+            {
+                if (_resumeDetails==null)
+                {
+                    _resumeDetails = _resumeModel.GetDetails();
+                   
+                }
+
+                return _resumeDetails;
+            }
+            set {
+                _resumeDetails = value;
+                OnPropertyChanged();
+            }
+        }
+
 
     }
 }

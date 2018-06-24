@@ -5,17 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InteractiveShravyaProfile"
         mc:Ignorable="d"
-        Title="Interactive Profile" Height="450" Width="800"
+        Title="Interactive Profile" Height="600" Width="1200"
         DataContext="{Binding  MainViewModel,Source={StaticResource ViewModelLocator}}"
         >
 
-    <Window.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resources.xaml"/>
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Window.Resources>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="15" />
@@ -54,11 +48,14 @@
              x:Name="App1Button"
              Content="Application 1"
              Command="{Binding NavigateToApp1}"
+              CommandParameter="App1Screen"
              />
             <Button Grid.Column="2"
              x:Name="App2Button"
              Content="Application 2"
              Command="{Binding NavigateToApp2}"
+              CommandParameter="App2Screen"
+                    
              />
             <Button Grid.Column="3"
              x:Name="HelpButton"
