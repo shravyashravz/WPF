@@ -137,6 +137,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Fonts\GOODTIME.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -161,6 +162,13 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\ShresumeImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ResumeImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\githubLogo.png" />
+    <Resource Include="Images\linkedinnLogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

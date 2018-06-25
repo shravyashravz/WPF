@@ -24,5 +24,10 @@ namespace InteractiveShravyaProfile.Screens
         {
             InitializeComponent();
         }
+
+        private void YourRequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            System.Diagnostics.Process.Start(e.Uri.ToString());
+        }
     }
 }

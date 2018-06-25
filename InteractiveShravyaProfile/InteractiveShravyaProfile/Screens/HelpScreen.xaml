@@ -9,6 +9,32 @@
              DataContext="{Binding HelpViewModel,Source={StaticResource ViewModelLocator}}"
              >
     <Grid>
-        <Label Content="{Binding ContextName}"   />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid  Grid.Row="0" Background="LightGray">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Description : " FontWeight="Bold"  FontFamily="pack://InteractiveShravyaProfile:,,,/Fonts/#Good Times" FontSize="15"/>
+                    <Label Content="{Binding ContextName}"   FontSize="10" />
+                </StackPanel>
+
+            </Grid>
+            <Grid Grid.Row="1">
+                
+            </Grid>
+            <Grid Grid.Row="2" Margin="5">
+                <WebBrowser Source="https://youtu.be/R0tHEJl_Y8E" />
+
+            </Grid>
+        </Grid>
+
+
+
+
+
     </Grid>
 </UserControl>

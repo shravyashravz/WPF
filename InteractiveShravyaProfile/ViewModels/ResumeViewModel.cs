@@ -28,7 +28,7 @@ namespace ViewModels
             throw new NotImplementedException();
         }
 
-        private string _contextName="My Resume";
+        private string _contextName="Resume";
 
         public string ContextName
         {

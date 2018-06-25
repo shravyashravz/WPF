@@ -30,7 +30,7 @@
                     <ColumnDefinition Width="40*"/>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0">
-                    <Label Content="Shravya's Interactive Profile" Style="{DynamicResource AppTitle}"/>
+                    <Label Content="Shravya's Interactive Profile"  FontFamily="pack://InteractiveShravyaProfile:,,,/Fonts/#Good Times" Style="{DynamicResource AppTitle}"/>
                 </Grid>
                 <Grid Grid.Column="1">
                     <Image Source="/Images/MnsuLogo.png" Margin="2,0,40,0"/>
@@ -48,7 +48,7 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+               
             </Grid.ColumnDefinitions>
             
             <Button Grid.Column="0"
@@ -65,7 +65,7 @@
               CommandParameter="App1Screen"
              Style="{DynamicResource MnsuStyle}"
              />
-            <Button Grid.Column="2"
+            <Button Grid.Column="3"
              x:Name="App2Button"
              Content="Application 2"
              Command="{Binding NavigateToApp2}"
@@ -74,7 +74,7 @@
              />
             <Button Grid.Column="3"
              x:Name="HelpButton"
-             Content="Help"
+             Content="Documentation"
              Command="{Binding NavigateToHelp}" 
              CommandParameter="HelpScreen"
              Style="{DynamicResource MnsuStyle}"

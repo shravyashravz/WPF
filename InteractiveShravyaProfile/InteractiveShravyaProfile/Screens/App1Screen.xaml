@@ -17,7 +17,7 @@
 
             <Grid  Grid.Row="0" Background="LightGray">
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="Description : " FontWeight="Bold" FontFamily="GOOD TIMES" FontSize="15"/>
+                    <Label Content="Description : " FontWeight="Bold"  FontFamily="pack://InteractiveShravyaProfile:,,,/Fonts/#Good Times" FontSize="15"/>
                     <Label Content="{Binding ContextName}"   FontSize="10" />
                 </StackPanel>
                 

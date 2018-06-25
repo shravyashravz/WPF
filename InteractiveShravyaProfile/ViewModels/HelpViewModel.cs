@@ -20,7 +20,7 @@ namespace ViewModels
             throw new NotImplementedException();
         }
 
-        private string _contextName="help me";
+        private string _contextName="Video Documentation to speed up things.";
 
         public string ContextName
         {
