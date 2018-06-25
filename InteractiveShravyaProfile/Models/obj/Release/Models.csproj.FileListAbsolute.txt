@@ -1,0 +1,9 @@
+C:\Users\gudiyaa\Desktop\WPF\InteractiveShravyaProfile\Models\bin\Release\Models.dll
+C:\Users\gudiyaa\Desktop\WPF\InteractiveShravyaProfile\Models\bin\Release\Models.pdb
+C:\Users\gudiyaa\Desktop\WPF\InteractiveShravyaProfile\Models\bin\Release\Newtonsoft.Json.dll
+C:\Users\gudiyaa\Desktop\WPF\InteractiveShravyaProfile\Models\bin\Release\Newtonsoft.Json.xml
+C:\Users\gudiyaa\Desktop\WPF\InteractiveShravyaProfile\Models\obj\Release\Models.csprojAssemblyReference.cache
+C:\Users\gudiyaa\Desktop\WPF\InteractiveShravyaProfile\Models\obj\Release\Models.csproj.CoreCompileInputs.cache
+C:\Users\gudiyaa\Desktop\WPF\InteractiveShravyaProfile\Models\obj\Release\Models.csproj.CopyComplete
+C:\Users\gudiyaa\Desktop\WPF\InteractiveShravyaProfile\Models\obj\Release\Models.dll
+C:\Users\gudiyaa\Desktop\WPF\InteractiveShravyaProfile\Models\obj\Release\Models.pdb
