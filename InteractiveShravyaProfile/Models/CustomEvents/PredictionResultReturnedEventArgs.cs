@@ -11,9 +11,15 @@ namespace Models.CustomEvents
     {
         public List<Prediction> _predictionResult {get;}
 
-        public PredictionResultReturnedEventArgs(List<Prediction> predictionResult)
+        public string _probability { get; }
+
+        public int _confidence { get; }
+
+        public PredictionResultReturnedEventArgs(List<Prediction> predictionResult,string probability,int confidence)
         {
             _predictionResult = predictionResult;
+            _probability = probability;
+            _confidence = confidence;
         }
     }
 }

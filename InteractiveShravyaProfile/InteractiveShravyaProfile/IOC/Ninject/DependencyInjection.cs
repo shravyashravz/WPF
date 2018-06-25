@@ -27,6 +27,7 @@ namespace InteractiveShravyaProfile.IOC.Ninject
             //Binding Models and Interfaces
             Bind<IResumeModel>().To<ResumeModel>().InSingletonScope();
             Bind<IApp1Model>().To<App1Model>().InSingletonScope();
+            Bind<IHelpModel>().To<HelpModel>().InSingletonScope();
 
 
             //Binding ViewModels to self
@@ -36,7 +37,7 @@ namespace InteractiveShravyaProfile.IOC.Ninject
             Bind<App2ViewModel>().ToSelf().InSingletonScope();
             Bind<HelpViewModel>().ToSelf().InSingletonScope();
 
-            
+
         }
     }
 }

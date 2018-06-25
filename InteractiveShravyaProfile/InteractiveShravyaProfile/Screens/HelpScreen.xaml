@@ -6,8 +6,20 @@
              xmlns:local="clr-namespace:InteractiveShravyaProfile.Screens"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
              DataContext="{Binding HelpViewModel,Source={StaticResource ViewModelLocator}}"
+             x:Name="ThisUserControl"      
              >
+    <!--<i:Interaction.Triggers>
+        <i:EventTrigger EventName="ScreenClosing">
+            <i:InvokeCommandAction Command="{Binding DoSome}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>-->
+
+
+
+
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -19,22 +31,37 @@
             <Grid  Grid.Row="0" Background="LightGray">
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Description : " FontWeight="Bold"  FontFamily="pack://InteractiveShravyaProfile:,,,/Fonts/#Good Times" FontSize="15"/>
-                    <Label Content="{Binding ContextName}"   FontSize="10" />
+                    <Label Content="{Binding ContextName}"   FontSize="10" >
+                        
+                    </Label>
+
                 </StackPanel>
 
             </Grid>
             <Grid Grid.Row="1">
-                
-            </Grid>
-            <Grid Grid.Row="2" Margin="5">
-                <WebBrowser Source="https://youtu.be/R0tHEJl_Y8E" />
 
             </Grid>
+            <!--<Grid Grid.Row="2" Margin="5">
+                <WebBrowser  Source="https://youtu.be/i-cGwp8QLjc" x:Name="wb"/>
+            </Grid>-->
+
+            
+            <Grid Grid.Row="2">
+                <WebBrowser x:Name="MyWebBrowser"
+                    Source="https://youtu.be/i-cGwp8QLjc"
+                    ScrollViewer.CanContentScroll="False"
+                    ScrollViewer.VerticalScrollBarVisibility="Hidden" />
+            </Grid>
         </Grid>
+
+        
 
 
 
 
 
     </Grid>
+
+
+
 </UserControl>

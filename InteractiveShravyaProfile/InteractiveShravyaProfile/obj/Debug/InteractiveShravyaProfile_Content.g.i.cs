@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/githublogo.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/linkedinnlogo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("videos/documentation.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("videos/documentation.wmv")]
 
 

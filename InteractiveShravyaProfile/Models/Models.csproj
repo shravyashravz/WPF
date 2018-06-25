@@ -50,6 +50,7 @@
     <Compile Include="Domain\Details.cs" />
     <Compile Include="Domain\PredictionResult.cs" />
     <Compile Include="Interfaces\IApp1Model.cs" />
+    <Compile Include="Interfaces\IHelpModel.cs" />
     <Compile Include="Interfaces\IResumeModel.cs" />
     <Compile Include="Models\App1Model.cs" />
     <Compile Include="Models\HelpModel.cs" />

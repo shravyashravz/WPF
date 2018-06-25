@@ -10,7 +10,7 @@ using System.Windows.Media.Imaging;
 
 namespace ViewModels
 {
-  public  class App1ViewModel: BaseViewModel, IScreen
+    public class App1ViewModel : BaseViewModel, IScreen
     {
         public string ScreenName => ScreenNames.App1Screen;
 
@@ -34,7 +34,9 @@ namespace ViewModels
         private void _app1Model_OnResultUpdated1(object sender, Models.CustomEvents.PredictionResultReturnedEventArgs e)
         {
             Predictions = e._predictionResult;
-        } 
+            Probability = e._probability;
+            Confidence = e._confidence;
+        }
 
         public void OnScreenDeactivated()
         {
@@ -43,7 +45,7 @@ namespace ViewModels
 
 
         private BitmapImage _imgSrc;
-       public BitmapImage ImgSrc
+        public BitmapImage ImgSrc
         {
             get
             {
@@ -53,14 +55,46 @@ namespace ViewModels
 
             set
             {
-                if ( _imgSrc != value)
-                { 
-                _imgSrc = value;
+                if (_imgSrc != value)
+                {
+                    _imgSrc = value;
                     OnPropertyChanged();
                 }
 
             }
         }
+
+        private string _probability;
+
+        public string Probability
+        {
+            get
+            {
+
+                return _probability;
+            }
+            set
+            {
+                _probability = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private int _confidence;
+
+        public int Confidence
+        {
+            get { return _confidence; }
+            set
+            {
+                _confidence = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+
+
 
         private string _contextName = null;
 
@@ -70,7 +104,7 @@ namespace ViewModels
             {
                 if (_contextName == null)
                 {
-                   _contextName = _app1Model.AppDescription;
+                    _contextName = _app1Model.AppDescription;
                 }
                 return _contextName;
             }
@@ -97,8 +131,8 @@ namespace ViewModels
             }
         }
         private void _browseFile(object obj)
-        {           
-            ImgSrc = _app1Model.brwoseForFileNameAsync().ImgSrc;          
+        {
+            ImgSrc = _app1Model.brwoseForFileNameAsync().ImgSrc;
         }
     }
 }

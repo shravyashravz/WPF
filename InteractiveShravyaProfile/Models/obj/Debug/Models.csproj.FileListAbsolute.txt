@@ -13,3 +13,4 @@ C:\Users\dkadi\Source\Repos\SHWPFDEMO\InteractiveShravyaProfile\Models\bin\Debug
 C:\Users\dkadi\Source\Repos\SHWPFDEMO\InteractiveShravyaProfile\Models\bin\Debug\Newtonsoft.Json.xml
 C:\Users\dkadi\Source\Repos\SHWPFDEMO\InteractiveShravyaProfile\Models\obj\Debug\Models.dll
 C:\Users\dkadi\Source\Repos\SHWPFDEMO\InteractiveShravyaProfile\Models\obj\Debug\Models.pdb
+C:\Users\dkadi\Source\Repos\SHWPFDEMO\InteractiveShravyaProfile\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache

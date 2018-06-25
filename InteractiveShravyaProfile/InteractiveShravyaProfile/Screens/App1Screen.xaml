@@ -42,10 +42,35 @@
                                 <RowDefinition Height="50*"/>
                             </Grid.RowDefinitions>
                             <Grid Grid.Row="0">
-                                <DataGrid ItemsSource="{Binding Predictions}"></DataGrid>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Padding="10,0,10,0" Margin="5" FontSize="20" Text="{Binding Probability ,StringFormat='The Following Product is a {0}'}">
+                                        <TextBlock.Style>
+                                            <Style TargetType="{x:Type TextBlock}">
+                                                <Setter Property="Foreground" Value="Red"/>
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Probability}" Value="BTE">
+                                                        <Setter Property="Foreground" Value="Green"/>
+                                                    </DataTrigger>
+                                                    <DataTrigger Binding="{Binding Probability}" Value="NOT BTE">
+                                                        <Setter Property="Foreground" Value="Red"/>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+
+                                    <Label  Padding="10,0,10,0" Margin="5" FontSize="20" Content="Predicted with a confidence of "></Label>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Padding="10,0,10,0" Margin="5" FontSize="20"  Content="{Binding Confidence}"></Label>
+
+                                        <Label Padding="10,0,10,0" Margin="5" FontSize="20"  Content=" %"></Label>
+
+                                    </StackPanel>
+                                   
+                                </StackPanel>
                             </Grid>
                             <Grid  Grid.Row ="1" Margin="10">
-                                
+                                <DataGrid ItemsSource="{Binding Predictions}"></DataGrid>
                             </Grid>
                         </Grid>
                        

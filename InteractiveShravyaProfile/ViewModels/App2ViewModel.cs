@@ -17,7 +17,7 @@ namespace ViewModels
 
         public void OnScreenDeactivated()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         private string _contextName = "app2 me";

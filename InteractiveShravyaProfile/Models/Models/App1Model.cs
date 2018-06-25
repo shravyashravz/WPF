@@ -35,7 +35,7 @@ namespace Models.Models
             List<Prediction> t = null;
             string fileName = "";
             BitmapImage bitmapimageresult = new BitmapImage();
-           OpenFileDialog dialog = new OpenFileDialog();
+            OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "Image files (*.png; *.jpg)|*.png;*.jpg;*jpeg|All files (*.*)|*.*";
             dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
 
@@ -54,7 +54,7 @@ namespace Models.Models
             {
                 bitmapimageresult = null;
             }
-          
+
 
             return new PredictionResult
             {
@@ -84,7 +84,10 @@ namespace Models.Models
 
                     List<Prediction> predictions = (JsonConvert.DeserializeObject<CustomVision>(responseString)).Predictions;
                     predictionsx = predictions;
-                    PredictionResultReturnedEventArgs Args = new PredictionResultReturnedEventArgs(predictions);
+
+                   
+
+                    PredictionResultReturnedEventArgs Args = new PredictionResultReturnedEventArgs(predictions, getProbability(predictionsx), getConfidence(predictionsx));
                     OnResultUpdated.Invoke(this, Args);
 
 
@@ -92,7 +95,28 @@ namespace Models.Models
             }
         }
 
+        private int getConfidence(List<Prediction> predictionsx)
+        {
+            var result = predictionsx.Select(a => a.Probability).FirstOrDefault();
 
+            var confidence = (result / 1) * 100;
 
+            return (int)confidence;
+        }
+
+        private string getProbability(List<Prediction> predictionsx)
+        {
+            var result = predictionsx.Select(a => a.Probability).FirstOrDefault();  
+
+            if (result > 0.5)
+            {
+                return "BTE";
+            }
+            else
+            {
+                return "NOT BTE";
+            }
+
+        }
     }
 }

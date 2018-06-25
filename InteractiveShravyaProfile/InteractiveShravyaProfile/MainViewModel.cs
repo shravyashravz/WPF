@@ -73,7 +73,8 @@ namespace InteractiveShravyaProfile
 
         private void ChangeViewModel(BaseViewModel viewModel)
         {
-            CurrentViewModel = viewModel;
+            ((IScreen)CurrentViewModel).OnScreenDeactivated();
+             CurrentViewModel = viewModel;
             ((IScreen)CurrentViewModel).OnScreenActivated();
         }
 
